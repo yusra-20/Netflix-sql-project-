@@ -46,7 +46,6 @@ LIMIT :                     DISTINCT :
 Aggregate Functions :       Subqueries : 
 
 ## Questions & SQL Queries
-
 1.How many Movies vs TV Shows are there?
 
 2. How many unique countries have content on Netflix?
