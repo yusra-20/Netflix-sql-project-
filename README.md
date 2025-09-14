@@ -2,6 +2,7 @@
 <p align="center">
   <img src="https://upload.wikimedia.org/wikipedia/commons/7/75/Netflix_icon.svg" alt="Netflix Logo" width="120"/>
 </p>
+
 ## 📌 Introduction
 This project analyzes **Netflix’s dataset** using **PostgreSQL** to extract meaningful insights about its content library.  
 The goal is to demonstrate **SQL skills** in data exploration, transformation, and analysis.
