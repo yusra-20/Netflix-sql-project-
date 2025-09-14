@@ -55,6 +55,15 @@ GROUP BY 1;
  Movie    | 6131
  TV Show  | 2676
 
+### 2️⃣ QUERY: How many unique countries have content on Netflix?
+```sql
+SELECT COUNT(DISTINCT country) AS unique_countries 
+FROM netflix;
+
+ unique_countries
+------------------
+ 748
+
 
 
 
