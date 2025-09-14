@@ -57,6 +57,8 @@ Copy code
 ----------+-------
  Movie    | 6131
  TV Show  | 2676
+
+
 2️⃣ How many unique countries have content on Netflix?
 sql
 Copy code
@@ -69,6 +71,8 @@ Copy code
  unique_countries
 ------------------
  748
+
+
 3️⃣ What’s the earliest and latest release year in the dataset?
 sql
 Copy code
@@ -81,6 +85,8 @@ Copy code
  earliest_year | latest_year
 ---------------+-------------
  1925          | 2021
+
+
 4️⃣ Which 10 countries produce the most content?
 sql
 Copy code
@@ -105,6 +111,8 @@ Copy code
  France         | 124
  Mexico         | 110
  Egypt          | 106
+
+
 5️⃣ What are the top 10 most common genres?
 sql
 Copy code
@@ -128,6 +136,8 @@ Copy code
  Documentaries             | 869
  Action & Adventure        | 859
  TV Dramas                 | 763
+
+
 6️⃣ Which years had the most content released?
 sql
 Copy code
@@ -148,6 +158,8 @@ Copy code
  2016         | 902
  2021         | 592
  2015         | 560
+
+
 7️⃣ What are the top 5 content ratings on Netflix?
 sql
 Copy code
