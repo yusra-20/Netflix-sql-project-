@@ -55,9 +55,99 @@ GROUP BY 1;
  Movie    | 6131
  TV Show  | 2676
 
+
 ### 2️⃣ QUERY: How many unique countries have content on Netflix?
 ```sql
+SELECT COUNT(DISTINCT country) AS unique_countries 
+FROM netflix;
 
+ unique_countries
+------------------
+ 748
+###3️⃣ QUERY: What’s the earliest and latest release year in the dataset?
+```sql
+SELECT MIN(release_year) AS earliest_year, MAX(release_year) AS latest_year
+FROM netflix;
+
+ earliest_year | latest_year
+---------------+-------------
+ 1925          | 2021
+
+
+###4️⃣ QUERY: Which 10 countries produce the most content?
+```sql
+SELECT country, COUNT(*) AS total_titles
+FROM netflix
+WHERE country IS NOT NULL
+GROUP BY country
+ORDER BY total_titles DESC
+LIMIT 10;
+
+ country        | total_titles
+----------------+--------------
+ India          | 972
+ United Kingdom | 419
+ Japan          | 245
+ South Korea    | 199
+ Canada         | 181
+ Spain          | 145
+ France         | 124
+ Mexico         | 110
+ Egypt          | 106
+
+###5️⃣ QUERY: What are the top 10 most common genres?
+```sql
+SELECT genre, COUNT(*) AS total
+FROM (
+    SELECT unnest(string_to_array(listed_in, ', ')) AS genre
+    FROM netflix
+) AS genres
+GROUP BY genre
+ORDER BY total DESC
+LIMIT 10;
+
+ genre                     | total
+---------------------------+-------
+ Dramas                    | 2427
+ Comedies                  | 1674
+ International TV Shows    | 1351
+ Documentaries             | 869
+ Action & Adventure        | 859
+ TV Dramas                 | 763
+
+
+###6️⃣ QUERY: Which years had the most content released?
+```sql
+SELECT release_year, COUNT(*) AS total_titles
+FROM netflix
+GROUP BY release_year
+ORDER BY total_titles DESC;
+
+ release_year | total_titles
+--------------+--------------
+ 2018         | 1147
+ 2017         | 1032
+ 2019         | 1030
+ 2020         | 953
+ 2016         | 902
+ 2021         | 592
+ 2015         | 560
+
+###7️⃣ QUERY: What are the top 5 content ratings on Netflix?
+```sql
+SELECT rating, COUNT(*) AS total
+FROM netflix
+GROUP BY rating
+ORDER BY total DESC
+LIMIT 5;
+
+ rating | total
+--------+------
+ TV-MA  | 3207
+ TV-14  | 2160
+ TV-PG  | 863
+ R      | 799
+ PG-13  | 490
 
 
 
