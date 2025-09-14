@@ -1,6 +1,5 @@
 # Netflix sql data analyst project
 
-![Netflix_logo](https://github.com/yusra-20/Netflix-sql-project-/blob/main/LOGO.png) ![](https://github.com/yusra-20/Netflix-sql-project-/blob/main/EDA%20visuals.jpeg)
 ## Introduction
 
 This project analyzes Netflix’s dataset using PostgreSQL to extract meaningful insights about its content library.
