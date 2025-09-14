@@ -57,12 +57,7 @@ GROUP BY 1;
 
 ### 2️⃣ QUERY: How many unique countries have content on Netflix?
 ```sql
-SELECT COUNT(DISTINCT country) AS unique_countries 
-FROM netflix;
 
- unique_countries
-------------------
- 748
 
 
 
